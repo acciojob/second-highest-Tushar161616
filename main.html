@@ -16,16 +16,27 @@
 				return "-Infinity";
 			}
 			arr.sort();
-        arr.reverse();
-			let sh = arr[1];
-			if(sh == 1)
+        // arr.reverse();
+		let num = 0;
+			for(let i = 0; i<arr.length; i++){
+			if(arr[i] === 1)
 			{
-				return "-Infinity";
-			}else{
-			return sh;
+				num++;
 			}
 		}
 
+			if(num === arr.length-1)
+			{
+				return "-Infinity";
+			}
+//second highest code
+			let firsth = arr[len];
+			let secondh = arr[len-2];
+
+			return secondh;
+		}
+
+			
 		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
